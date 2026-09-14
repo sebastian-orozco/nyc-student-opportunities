@@ -1,0 +1,84 @@
+name: New opportunity
+description: Suggest a program, internship, job, competition, scholarship, or event for NYC high school students
+title: "[New] "
+labels: ["new-opportunity"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Opportunity name
+      placeholder: Teens-in-Residence
+    validations:
+      required: true
+  - type: input
+    id: organization
+    attributes:
+      label: Organization
+      placeholder: MoMA
+  - type: input
+    id: url
+    attributes:
+      label: Link to the program's own page
+      description: Please link to the organization's site, not a newsletter or social media post.
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Pre-College & Academic
+        - STEM
+        - Business & Jobs
+        - Leadership, Government & Law
+        - Art, Museums & Design
+        - Writing, Theater, Music & Film
+        - Volunteering, Parks & Nature
+        - College Prep
+        - Contests & Competitions
+        - Scholarships
+        - One-off event (fair, info session, etc.)
+    validations:
+      required: true
+  - type: checkboxes
+    id: grades
+    attributes:
+      label: Grades eligible
+      options:
+        - label: "9"
+        - label: "10"
+        - label: "11"
+        - label: "12"
+  - type: textarea
+    id: eligibility
+    attributes:
+      label: Who can apply?
+      description: Any requirements (income, residency, age, GPA, identity, NYC public school…)? Say whether each is required or just preferred.
+      placeholder: "Required: NYC public school students. Priority: low-income students, but all may apply."
+  - type: input
+    id: dates
+    attributes:
+      label: When does it run?
+      placeholder: Tuesdays, October – June
+  - type: input
+    id: location
+    attributes:
+      label: Where?
+      placeholder: Manhattan (4 W 54th St) / Virtual
+  - type: input
+    id: cost
+    attributes:
+      label: Cost, pay, or award
+      placeholder: Free, $16.50/hr stipend
+  - type: input
+    id: deadline
+    attributes:
+      label: Application deadline
+      placeholder: September 14, 2026 / Rolling
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?

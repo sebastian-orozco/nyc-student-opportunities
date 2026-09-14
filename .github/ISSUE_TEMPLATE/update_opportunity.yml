@@ -1,0 +1,30 @@
+name: Update an opportunity
+description: Report a changed deadline, broken link, closed program, or wrong details
+title: "[Update] "
+labels: ["update-opportunity"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Link currently listed for the opportunity
+      description: Right-click the program name in the table and copy the link address.
+    validations:
+      required: true
+  - type: checkboxes
+    id: problem
+    attributes:
+      label: What needs changing?
+      options:
+        - label: Deadline or dates
+        - label: Link is broken or wrong
+        - label: Eligibility or grades
+        - label: Cost or pay
+        - label: Program is closed or cancelled
+        - label: Something else
+  - type: textarea
+    id: details
+    attributes:
+      label: Correct information
+      description: Include a source (link) if you can.
+    validations:
+      required: true
